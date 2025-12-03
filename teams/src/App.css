@@ -57,3 +57,69 @@
 .member:nth-child(11) { background: linear-gradient(100deg, #2c2f33, #322C27); }
 .member:nth-child(12) { background: linear-gradient(100deg, #2c2f33, #322C27); }
 .member:nth-child(13) { background: linear-gradient(100deg, #2c2f33, #322C27); }
+
+.icon {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: #fff;
+  flex-shrink: 0;
+  margin-left: 90px;
+  margin-top: 20px;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  z-index: 1;
+}
+
+.icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(78, 78, 78, 0.5);
+  transform: scale(0);
+  transform-origin: center;
+  border-radius: 50%;
+  transition: transform 0.5s ease-in-out;
+  z-index: -1;
+}
+
+.icon.clicked::before {
+  transform: scale(1);
+}
+
+.icon:not(.clicked)::before {
+  transform: scale(0);
+}
+
+.member:nth-child(1) .icon { background: #202429; color: #000000; }
+.member:nth-child(2) .icon { background: #E6EDDD; color: #506239; }
+.member:nth-child(3) .icon { background: #E6EDDD; color: #506239; }
+.member:nth-child(4) .icon { background: #F5D4DF; color: #731F3B; }
+.member:nth-child(5) .icon { background: #E8DDD9; color: #58382B; }
+.member:nth-child(6) .icon { background: #E6EDDD; color: #506239; }
+.member:nth-child(7) .icon { background: #4b3187; color: #2f2546; }
+.member:nth-child(8) .icon { background: #00796b; color: #003730; }
+.member:nth-child(9) .icon { background: #F5D4DF; color: #731F3B; }
+.member:nth-child(10) .icon { background: #DBF0F3; color: #336969; }
+.member:nth-child(11) .icon { background: #F8EACD; color: #7C5912; }
+.member:nth-child(12) .icon { background: #E6EDDD; color: #506239; }
+.member:nth-child(13) .icon { background: #F5D4DF; color: #731F3B; }
+
+.fio {
+  width: 230px; 
+  background-color: #161717;
+  font-size: 13px;
+  padding: 5px; 
+  border-radius: 5px;
+  color: #e8eaed;
+  text-align: left;
+  line-height: 1.4;
+  font-weight: 400;
+  margin-left: -7px;
+}
